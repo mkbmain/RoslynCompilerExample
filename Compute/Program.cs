@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Compute
 {
-    class Program
+    static class Program
     {
         static void Main()
         {
@@ -18,7 +18,7 @@ namespace Compute
             }
         }
 
-        public static (int baseValue, string sequence) GetInputs()
+        private static (int baseValue, string sequence) GetInputs()
         {
             Console.Write("enter your base value:");
             var baseValuestr = Console.ReadLine();

@@ -14,7 +14,7 @@ namespace Compute
             var references = new[]
             {
                 MetadataReference.CreateFromFile(typeof(object).Assembly.Location),
-                MetadataReference.CreateFromFile(typeof(Enumerable).Assembly.Location)
+                MetadataReference.CreateFromFile(typeof(Enumerable).Assembly.Location),
             };
 
             // analyse and generate IL code from syntax tree
@@ -32,8 +32,7 @@ namespace Compute
             {
                 // handle exceptions
                 var failures = compileResult.Diagnostics.Where(diagnostic =>
-                        diagnostic.IsWarningAsError ||
-                        diagnostic.Severity == DiagnosticSeverity.Error)
+                        diagnostic.IsWarningAsError || diagnostic.Severity == DiagnosticSeverity.Error)
                     .Select(diagnostic => $"{diagnostic.Id}: {diagnostic.GetMessage()}");
                 Console.Error.Write(string.Join(Environment.NewLine, failures));
                 return default;
