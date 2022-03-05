@@ -1,25 +1,20 @@
-﻿using QuickExample;
-using System;
-using System.Threading.Tasks;
+﻿//using QuickExample;
+//using System;
+//using System.Threading.Tasks;
 
-namespace TBD.Roslyn
-{
+//namespace TBD.Roslyn
+//{
 
-    public class CodeGen
-    {
-        public Action<ContractForFuncs> Run()
-        {
-            return te;
-        }
+//    public class CodeGen
+//    {
+//        public Func<ContractForFuncs, Task> Run() => AddonEntry;
 
-        private static Action<ContractForFuncs> te = async request =>
 
-        {
+//        private static async Task AddonEntry(ContractForFuncs contract) 
+//        {
 
-                  | CODE |
-                  }
+//        } 
+//    }
 
-        ;
-    }
-
-}
+  
+//}

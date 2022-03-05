@@ -4,32 +4,18 @@
     {
         public static SourceCodeModelForContractForFuncs BuildFunctionCode(string code)
         {
-            const string Base = @" using QuickExample;
+            const string Base = @"using QuickExample;
 using System;
 using System.Threading.Tasks;
 
- namespace TBD.Roslyn
+namespace TBD.Roslyn
 {
-  
-        public class CodeGen
-        {
-            public Func<ContractForFuncs, Task<bool>> Run()
-            {
-                return te;
-            }
 
-            private static Func<ContractForFuncs, Task<bool>> te = async request =>
+    public class CodeGen
+    {
+        public Func<ContractForFuncs, Task> Run() => AddonEntry;
 
-{
-             
-                  |CODE|
-  return true;         
- }             
-    
-            ;
-        }
-    
-}
+          private static async Task AddonEntry(ContractForFuncs contract)|CODE| }}
 ";
             return new SourceCodeModelForContractForFuncs
             {

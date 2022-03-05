@@ -1,0 +1,15 @@
+﻿    
+            add a button     
+         {
+         var btn = new System.Windows.Forms.Button()
+            {
+                Text = "click Me",
+                Location = new System.Drawing.Point(700, 100),
+
+            };
+            btn.Click += (s, e) => { contract.MainForm.textBox1.Text = "Example"; };
+            contract.MainForm.Controls.Add(btn);
+
+            }
+
+
